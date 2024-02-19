@@ -5,17 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css'
+        integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=='
+        crossorigin='anonymous' />
 </head>
 
 <body>
-    <section>
+    <section class="container mt-5">
         <h2>SNACK 2</h2>
-        <form action="snack2.php" method="get">
-            <input type="text" name="name">
-            <input type="text" name="email">
-            <input type="text" name="age">
+        <form class="d-flex flex-column gap-3 mt-3" action="snack2.php" method="get">
+            <div>
+                <label for="name"> Scrivi il nome </label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="email"> Scrivi l'email</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div>
+                <label for="age">Scrivi l'età</label>
+                <input type="text" name="age" id="age">
+            </div>
         </form>
-        <a href="http://localhost/php-snacks-blocco-1/">Torna indietro</a>
+        <a class="mt-5 btn btn-warning" href="http://localhost/php-snacks-blocco-1/">Torna indietro</a>
     </section>
 </body>
 
