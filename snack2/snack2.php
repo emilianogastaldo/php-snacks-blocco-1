@@ -25,10 +25,12 @@ $class_color = 'text-danger';
 
 // centralizzo la validazione dell'email
 $is_valid_email = false;
-if((strpos($email,'.') || strpos($email,'.') === 0) && (strpos($email,'@') || strpos($email,'@') === 0)){
+// if((strpos($email,'.') || strpos($email,'.') === 0) && (strpos($email,'@') || strpos($email,'@') === 0)){
+//     $is_valid_email = true;
+// }
+if(str_contains($email,'.') && str_contains($email,'@')){
     $is_valid_email = true;
 }
-
 // Logica per sapere se i dati vanno bene o meno
 if(mb_strlen($name) > 3 && $is_valid_email && is_numeric($age) ){
     $message = 'Accesso riuscito';
