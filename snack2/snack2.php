@@ -54,6 +54,21 @@ if(mb_strlen($name) > 3 && $is_valid_email && is_numeric($age) ){
         <h2 class="<?= $class_color ?>">
             <?= $message ?>
         </h2>
+        <p>
+            <?php 
+            if(mb_strlen($name) < 3) echo 'Nome troppo corto';
+            ?>
+        </p>
+        <p>
+            <?php 
+            if(!is_numeric($age)) echo 'Non hai inserito un numero per l\'età';
+            ?>
+        </p>
+        <p>
+            <?php 
+            if(!$is_valid_email) echo 'L\'email non ha @ o .';
+            ?>
+        </p>
         <a href="http://localhost/php-snacks-blocco-1/snack2/">Torna indietro</a>
     </section>    
 </body>
