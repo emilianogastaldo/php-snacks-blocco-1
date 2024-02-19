@@ -19,7 +19,6 @@ Dolores non quos sapiente incidunt, ipsum, delectus impedit excepturi obcaecati 
 Cumque necessitatibus obcaecati voluptatum quia, asperiores magnam, voluptatibus fugiat sequi aut dolorum laudantium repellendus totam eaque officia nulla cum, consequatur vero ab. Quos laboriosam repellendus omnis quam, quibusdam quas consectetur?';
 
 $lorem_exploded = explode('.' , $lorem);
-var_dump($lorem_exploded);
 ?>
 
 <!DOCTYPE html>
