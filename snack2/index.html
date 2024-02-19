@@ -13,21 +13,25 @@
 <body>
     <section class="container mt-5">
         <h2>SNACK 2</h2>
-        <form class="d-flex flex-column gap-3 mt-3" action="snack2.php" method="get">
-            <div>
-                <label for="name"> Scrivi il nome </label>
-                <input type="text" name="name" id="name">
+        <form action="snack2.php" method="get">
+            <div class="d-flex flex-column gap-3 my-3">
+                <div>
+                    <label for="name"> Scrivi il nome </label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    <label for="email"> Scrivi l'email</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div>
+                    <label for="age">Scrivi l'età</label>
+                    <input type="text" name="age" id="age">
+                </div>
             </div>
-            <div>
-                <label for="email"> Scrivi l'email</label>
-                <input type="text" name="email" id="email">
-            </div>
-            <div>
-                <label for="age">Scrivi l'età</label>
-                <input type="text" name="age" id="age">
-            </div>
+            <button class="btn btn-primary" type="submit">Invia i dati</button>
+            <button class="btn btn-warning" type="reset">Resetta</button>
         </form>
-        <a class="mt-5 btn btn-warning" href="http://localhost/php-snacks-blocco-1/">Torna indietro</a>
+        <a class="mt-5 btn btn-secondary" href="http://localhost/php-snacks-blocco-1/">Torna indietro</a>
     </section>
 </body>
 
