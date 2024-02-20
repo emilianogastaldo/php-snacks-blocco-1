@@ -19,9 +19,7 @@ $name = $_GET['name'];
 $email = $_GET['email'];
 $age = $_GET['age'];
 
-// iniziallizzo il messaggio
-$message = 'Accesso negato';
-$class_color = 'text-danger';
+
 
 // Validazione dell'email
 $is_valid_email = false;
@@ -38,14 +36,11 @@ $is_valid_name = mb_strlen(trim($name)) > 3;
 $is_valid_age = is_numeric($age) && $age > 0;
 
 // Validazione del form
-$is_valid_form = $is_valid_name || $is_valid_email || $is_valid_age;
+$is_invalid_form = !$is_valid_name || !$is_valid_email || !$is_valid_age;
 
 // Logica per sapere se i dati vanno bene o meno
-if($is_valid_form){
-    $message = 'Accesso riuscito';
-    $class_color = 'text-success';
-}
-
+$message = $is_invalid_form ?  'Accesso negato': 'Accesso riuscito' ;
+$class_color = $is_invalid_form ?  'text-danger':'text-success';
 ?>
 
 <!DOCTYPE html>
