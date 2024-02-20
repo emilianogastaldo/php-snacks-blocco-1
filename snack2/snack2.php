@@ -37,8 +37,11 @@ $is_valid_name = mb_strlen(trim($name)) > 3;
 // Validazione data
 $is_valid_age = is_numeric($age) && $age > 0;
 
+// Validazione del form
+$is_valid_form = $is_valid_name || $is_valid_email || $is_valid_age;
+
 // Logica per sapere se i dati vanno bene o meno
-if($is_valid_name && $is_valid_email && $is_valid_age){
+if($is_valid_form){
     $message = 'Accesso riuscito';
     $class_color = 'text-success';
 }
@@ -62,12 +65,12 @@ if($is_valid_name && $is_valid_email && $is_valid_age){
         </h2>
         <p>
             <?php 
-            if(mb_strlen($name) < 3) echo 'Nome troppo corto';
+            if(!$is_valid_name) echo 'Nome troppo corto';
             ?>
         </p>
         <p>
             <?php 
-            if(!is_numeric($age)) echo 'Non hai inserito un numero per l\'età';
+            if(!$is_valid_age) echo 'Non hai inserito un numero per l\'età';
             ?>
         </p>
         <p>
