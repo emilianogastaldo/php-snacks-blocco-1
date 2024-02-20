@@ -23,7 +23,7 @@ $age = $_GET['age'];
 $message = 'Accesso negato';
 $class_color = 'text-danger';
 
-// centralizzo la validazione dell'email
+// Validazione dell'email
 $is_valid_email = false;
 // if((strpos($email,'.') || strpos($email,'.') === 0) && (strpos($email,'@') || strpos($email,'@') === 0)){
 //     $is_valid_email = true;
@@ -31,8 +31,14 @@ $is_valid_email = false;
 if(str_contains($email,'.') && str_contains($email,'@')){
     $is_valid_email = true;
 }
+// Validazione nome
+$is_valid_name = mb_strlen(trim($name)) > 3;
+
+// Validazione data
+$is_valid_age = is_numeric($age) && $age > 0;
+
 // Logica per sapere se i dati vanno bene o meno
-if(mb_strlen($name) > 3 && $is_valid_email && is_numeric($age) ){
+if($is_valid_name && $is_valid_email && $is_valid_age){
     $message = 'Accesso riuscito';
     $class_color = 'text-success';
 }
