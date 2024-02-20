@@ -33,7 +33,7 @@ $lorem_exploded = explode('.' , $lorem);
         <h2>SNACK BONUS</h2>
         <div>
             <?php foreach($lorem_exploded as $paragraph) :?>
-                <p><?= $paragraph ?></p>
+                <p><?= $paragraph ?>.</p>
             <?php endforeach?>
         </div>
         <a href="http://localhost/php-snacks-blocco-1/">Torna indietro</a>
